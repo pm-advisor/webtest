@@ -15,8 +15,8 @@
 
          */
 
-         var intVal1 = 5.0E-324;
-         var intVal2 = 1.7E309;
+         var intVal1 = 5.0E-325; // Infinity
+         var intVal2 = 1.7E309; // Infinity
 
          var strVal = "최규진";
          var booVal = true;
@@ -24,12 +24,8 @@
          console.log("intVal : "+ intVal1);
          console.log("intVal : "+ intVal2);
 
-         console.log("strVal : "+ strVal);
-         console.log("booVal : " + booVal)
-
-         document.write("intVal : "+ intVal);
-         document.write("strVal : "+ strVal);
-
+         document.writeln("strVal : "+ strVal);
+         
          window.alert("booVal : " + booVal)
 
     </script>
