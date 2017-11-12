@@ -36,11 +36,23 @@
         </style>
         <head>
 
-            <script src="../../libs/jquery-1.11.0.min.js"></script>
+            <script src="../libs/jquery-1.11.0.min.js"></script>
             <script>
-            /*
-                예제01: 물고기를 현재 위치에서 430px 위치로 부드럽게 움직이도록 시작 버튼을 만들어주세요.
-             */
+                /*
+                 예제01: 물고기를 현재 위치에서 430px 위치로 부드럽게 움직이도록 시작 버튼을 만들어주세요.
+                 */
+
+                $(document).ready(function() {
+                    // 물고기 노드 구하기.
+                    var $fish = $("#fish");
+
+                    // 버튼에 이벤트 걸기.
+                    $("#btnStart").click(function() {
+                        $fish.animate({
+                            left : "430px"
+                        }, 1000);
+                    });
+                })
 
             </script>
 
