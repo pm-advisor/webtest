@@ -11,12 +11,15 @@
         #ch02 {display: none;}
         #ch03 {display: none;}                     
         #appendix01 {display: none;}
+        #appendix02 {display: none;}
     </style>
     <script>
-        function showDiv(id) {
-            // 모든 <div>를 숨기고,
-            // 선택된 <div> 를 보여줌
-        }
+        $(document).ready(function(){
+            $("ch01").on("click",function(){
+                // 클릭했을때 해당 div가 보이고,
+                // 다시 클릭하면 해당 div가 숨겨지도록 하고 싶은데..
+            })
+        });
     </script>
 </head>
 <body>
@@ -86,7 +89,13 @@
     <a href="appendix02/A010204.html">jQuery를 사용 사례(4)</a><br /><br />
     <a href="appendix02/A010205.html">jQuery를 사용 사례(5)</a><br /><br />
     <a href="appendix02/A010206.html">jQuery를 사용 사례(6)</a><br /><br />
-</div>    
+</div>
+<h3 onclick="showDiv()">자바스크립트 코어 기본 문법 : 04장 조건문 if</h3>        
+<div id="appendix02">
+    <a href="ch04/010201.html">jQuery를 사용 사례(1)</a><br /><br />
+    
+</div>
+
 <br /><br />
 <a href="../index.html">[HOME]</a>
 <a href="http://www.webdongne.com" target="_blank" >[웹동네]</a>
