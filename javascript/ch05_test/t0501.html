@@ -18,6 +18,9 @@
         var op = window.prompt("사칙연산자 중 하나를 입력해주세요.");
         var num2 = window.prompt("두 번째 숫자 값을 입력 해주세요.");
 
+        num1 = Number(num1);
+        num2 = Number(num2);
+
         switch(op) {
             case "+" :
                 result = num1 + num2;
