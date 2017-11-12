@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title></title>
+    <script>
+        var text = "100.5";        
+        var result1 = parseInt(text);    // 100
+        var result2 = parseFloat(text);  // 100.5
+        var result3 = Number(text);      // 100.5
+
+        var num = 100.5;        
+        var result4 = num.toString();    // 100.5
+        var result5 = num.toFixed();     // 100.5
+        var result6 = String(num);       // 100.5
+
+        console.log(result1);
+        console.log(result2);
+        console.log(result3);
+
+        console.log(result4);
+        console.log(result5);
+        console.log(result6);
+    
+    </script>    
+</head>
+<body>
+<h3>문자를 숫자로 형변환하는 방법</h3>
+<h4>암시적 형변환</h4>
+없음
+<h4>명시적 형변환</h4>
+<pre>
+var text = "100.5"        
+var result = parseInt(text);    // 100
+var result = parseFloat(text);  // 100.5
+var result = Number(text);      // 100.5
+</pre>
+<h3>숫자를 문자로 형변환하는 방법</h3>
+<h4>암시적 형변환</h4>
+var result = 숫자 + "";
+<h4>명시적 형변환</h4>
+<pre>
+var num = 100.5        
+var result = num.toString();    // 100.5
+var result = num.toFixed();     // 100.5
+var result = String(num);       // 100.5
+</pre>
+</body>
+</html>
