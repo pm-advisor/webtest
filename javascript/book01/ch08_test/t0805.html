@@ -29,30 +29,43 @@
      들어주세요. 단, 주의할 점이 하나 있는데요. 실행화면은 #container1과 #container2 각각 따로 실행해
      캡처한 내용이 아니라 한 화면에 동시에 실행된 화면이니 이에 맞게 처리해 주세요.
      */
-        $(document).ready(function(){
 
-            // 이미지 찾기.
-            var $images = $("#container1 img");
+    // 이미지 목록을 담을 전역 변수 선언
+    // var $images = null; 
 
-            // 이미지 개수 구하기.
-            var length = $images.length;
+    $(document).ready(function(){
 
-            // 이미지 배열하기.
-            for(var i=0;i<length;i++){
-                // n번째 이미지 구하기
-                var $img = $images.eq(i);
+        // 이미지 찾기.
+        $images1 = $("#container1 img"); 
+        $images2 = $("#container2 img"); 
 
-                // 위치 값 구하기
-                var x = 100+((i%3)*200);
-                var y = 100+(parseInt(i/3)*200);
+        // 함수 호출
+        showGallery($images1,6,150,150);
+        showGallery($images2,4,200,200);
 
-                // 위치 설정
-                $img.css({
-                    left:x,
-                    top:y
-                });
-            }
-        });
+    });
+
+    function showGallery($images, count, width, height){
+
+        // 이미지 개수 구하기.
+        var length = $images.length;        
+
+        // 이미지 배열하기.
+        for(var i=0;i<length;i++){
+            // n번째 이미지 구하기
+            var $img = $images.eq(i);
+            
+            // 위치 값 구하기 
+            var x = 100+((i%count)*width);
+            var y = 100+(parseInt(i/count)*height);
+
+            // 위치 설정
+            $img.css({
+                left:x,
+                top:y
+            });
+        }
+
     </script>
 </head>
     
