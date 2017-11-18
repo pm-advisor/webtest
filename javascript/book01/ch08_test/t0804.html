@@ -17,7 +17,7 @@
     }
 </style>
     
-<script type="text/javascript"  src="../../../libs/jquery-1.11.0.min.js"> </script>
+<script type="text/javascript"  src="../../libs/jquery-1.11.0.min.js"> </script>
 <script>
 /*
      미션 04: 심플 갤러리를 함수로 만들기 1
@@ -30,7 +30,6 @@
      실행 예 2
      simpleGallery(3,200,200);
 
- */    
 $(document).ready(function(){
     
     // 이미지 찾기.
@@ -55,6 +54,41 @@ $(document).ready(function(){
         });
     }
 });
+ */  
+
+$(document).ready(function(){
+
+    // 이미지 찾기.
+    var $images = $("#container1 img"); 
+
+    // 함수 호출
+    simpleGallery(5,150,150);
+
+ });
+
+function simpleGallery(count, width, height){
+
+    // 이미지 개수 구하기.
+    var length = $images.length;        
+
+    // 이미지 배열하기.
+    for(var i=0;i<length;i++){
+        // n번째 이미지 구하기
+        var $img = $images.eq(i);
+        
+        // 위치 값 구하기 
+        var x = 100+((i%count)*width);
+        var y = 100+(parseInt(i/count)*height);
+        
+        // 위치 설정
+        $img.css({
+            left:x,
+            top:y
+        });
+    }
+
+}
+
 </script>
 </head>
     
