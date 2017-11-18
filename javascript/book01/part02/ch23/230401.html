@@ -17,9 +17,15 @@
         setInterval(function(){
             count++;
             document.write(count+" 안녕하세요.", "<br>");
+            if(count > 10){
+                document.write(count+" 종료합니다~ <br />");
+                return;
+            }
         },1000)
     }
+
     startHello();
+    
 
 
 </script>
