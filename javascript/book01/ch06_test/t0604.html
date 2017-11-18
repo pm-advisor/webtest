@@ -15,8 +15,7 @@
             top: 0;
             width: 120px;
         }
-        
-        #btnStart{
+        #btnStart {
             padding:5px;
             margin-bottom:5px;
         }
@@ -24,24 +23,22 @@
 
     <!--
 
-    미션 03: 이미지를 가로로 배열하기
+    미션 04: 이미지를 가로*세로로 배열하기
     버튼을 클릭하면 이미지를 요구사항에 맞게 배열해 주세요.
 
-    요구사항
-        01. 이미지 시작위치는 left:100, top:100 입니다.
-        02. 하나의 이미지 영역(이미지 크기와 여백 포함)은 150*150입니다.
-        03. 이미지를 가로로 배열해 주세요.
-
+    요구사항:
+        1. 이미지 시작위치는 left:100, top:100 입니다.
+        2. 하나의 이미지 영역은 200*200입니다.
+        3. 이미지는 3열로 배열해 주세요.
 
     힌트 :
-        이미지 위치 설정하기
-            $대상.css({
-                left:위치값,
-                top:위치값
-            })
+    $대상.css({
+        "left":위치값,
+        "top":위치값
+    })
 
     -->
-    <script type="text/javascript"  src="../../../libs/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript"  src="../../libs/jquery-1.11.0.min.js"></script>
     <script>
         $(document).ready(function() {
             // 버튼 클릭 이벤트 실행.
@@ -54,16 +51,18 @@
                 var length = $images.length;
 
                 // 여기에 풀이를 입력해주세요.
-                // 이미지 배열하기.
-                for (var i = 0; i < length; i++) {
-                    // n번째 이미지 구하기
+                // 이미지 배열하기
+                for(var i=0;i<length;i++{
+                    // i번째 이미지를 구함
                     var $img = $images.eq(i);
-                    // 위치 값 구하기
-                    var x = 100 + (i * 150);
+                    // 위치값을 구하기
+                    var x = 100 + ((i%3)*200);
+                    var y = 100 + (parseInt(i/3)*200);
+
                     // 위치 설정
                     $images.eq(i).css({
-                        left:x,
-                        top:100
+                        left : x,
+                        top : y
                     });
                 }
             });
@@ -84,6 +83,9 @@
         <img src="banners/3.png" >
         <img src="banners/4.png" >
         <img src="banners/5.png" >
+        <img src="banners/6.png" >
+        <img src="banners/7.png" >
+        <img src="banners/8.png" >
     </div>
 </body>
 </html>
