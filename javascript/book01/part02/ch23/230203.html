@@ -22,6 +22,8 @@
              2 안녕하세요. 환영합니다.
              . . . . .
 
+        Tip) 함수 재사용을 하지 않는 경우에는 익명함수를 활요함!!
+
         */
 
         var count=0;
@@ -29,7 +31,8 @@
 
         $(document).ready(function() {
             $info = $("#info");
-
+            
+            /* 
             $info.append("<p>"+count+" 안녕하세요. 환영합니다.</p>");
             count++;
             $("#btnStart").click(function(){
@@ -37,8 +40,25 @@
                 $info.append("<p>"+count+" 안녕하세요. 환영합니다.</p>");
                 count++;
             });
+            */
+            
+            // 함수활용 버전
+            hello();
+            $("#btnStart").click(function(){
+                hello();
+            });
 
         });
+            
+        function hello(){
+            $info.append("<p>"+count+" 안녕하세요. 환영합니다.</p>");
+            count++;
+        }
+
+
+
+
+
 
     </script>
 
