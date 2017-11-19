@@ -21,9 +21,10 @@
 
         // 콜백함수를 사용하는 경우
         
-        function sum(num1,num2, callback){
+        function sum(num1,num2, callme){
             var temp = num1+num2;
-            callback(temp); // callback() 이라는 이름을 꼭 써야 하는건 아니껬지? 써야함!!
+            // callback(temp); // callback() 이라는 이름을 꼭 써야 하는건 아니껬지? 써야함!!
+            callme(temp);
         }
         
         function result(value){
