@@ -67,6 +67,7 @@
 
 			// 요소 초기화, tabMenu() 함수 내부에서 사용할 공통 데이터는 모두 이곳에 작성해주세요.
 			function init(selector){
+				console.log("selector"+selector);
 				$tabMenu = $(selector);
 				$menuItems =$tabMenu.find("li");
 			}
@@ -80,6 +81,8 @@
 
 			// 선택 메뉴 아이템 만들기
 			function setSelectItem($item){
+				console.log("$item"+$item);
+				console.log("$selectMenuItem"+$selectMenuItem);
 				if($selectMenuItem){
 					$selectMenuItem.removeClass("select");
 				}
