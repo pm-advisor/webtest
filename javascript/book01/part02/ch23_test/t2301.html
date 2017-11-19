@@ -26,7 +26,6 @@
         */
 
         $(document).ready(function() {
-            console.log("---1 ----");
             checkCount(showMessage);
         });
 
@@ -37,9 +36,13 @@
         function checkCount(callback){
             var count=0;
             $("#btnStart").click(function(){
+                console.log("--- check 2----");
                 count++;
-                if(count>=10)
-                    callback();
+                if(count>=10){
+                    console.log("--- check 2----");
+                    callback();     
+                }
+                    
             })
         }
 
