@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Untitled Document</title>
+
+    <script>
+        /*  동기 테스트 vs 비동기 테스트
+            - 동기 : 함수가 호출된 후 끌날때까지 다음 구문을 실행하지 않고 대기하고 있는 경우
+            - 비동기 : 함수가 호출도니 후 끌날때 까지 기다리지 않고 바로 다음 구문을 살행하는 경우
+
+        // 동기 테스트
+        alert("안녕하세요");
+        document.write("alert() 동작이 끝나야 이 내용은 실행됩니다.");
+        
+        */
+
+        //  예제 04: 비동기 테스트
+        var count=1;
+
+        setInterval(function(){
+            document.write("2. count = "+count);
+        },3000);
+
+        document.write("1. ajax() 동작이 모두 끝나지 않았어도 바로 실행됩니다.");
+
+        /* 실무 사용 예시
+
+        1. 이벤트 리스너로 사용
+            - jQuery에서 클릭과 같은 이벤트를 처리하기 위해 등록하는 이벤트 리스너가 콜백함수임 ???
+
+            $("#btnStart").click(function(){
+                alert("클릭되었습니다.");
+            });
+
+        2. 타이머 실행 함수로 사용
+            - setInterval() 함수는 특정 시산마다 첫번째 매개변수값으로 넘겨진 함수를 호출해주는 기능을 가진 함수
+            - 이때 매겨변수 값으로 넘기는 함수가 콜백함수임
+            
+            setInterval(function(){
+                alert("1초마다 한번씩 실행되요~")
+            }, 1000);            
+
+        3. Ajax 결과값을 받을 때 사용
+            - 서버와 데이터를 주고 받을때 사용하는 jQuery Ajax 기능들에서 결과물을 받을 때 콜백 함수가 사용됨
+
+            $.get("http://www.webddongne.com/test.php", function(){
+                alert("정상적으로 서버 통신이 이뤄졌습니다..");
+            });
+
+        4. jQuery 애니메이션 완료
+            - HTML 요소를 멋지게 움직이는 jQuery 애니메이션 기능에서 애니메이션이 모두 끝났을 떼 실행하는 함수
+
+            $("#target").animate({
+                left : 100,
+                opacity : 1
+            }, 2000, "easeOutQuint", function(){
+                alert("애니메이션이 완료되었습니다.")
+            });
+        
+        즉, 콜백 함수는 로직 구현 부분과 로직 처리 부분을 나눠 작업할 때 주로 사용됨!!!     
+
+        */
+
+    </script>
+</head>
+
+<body>
+
+</body>
+</html>

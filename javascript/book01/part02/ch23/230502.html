@@ -5,19 +5,31 @@
 <title>Untitled Document</title>
 
     <script>
-
         /*
          예제 02: 두 수를 더하는 함수를 만들어 주세요.
 
-         콜백함수를 사용하는 경우
-         */
+        리턴값을 이용하는 경우
+         
+        function sum(num1, num2){
+            return num1+num2;
+        }
+        
+        var result = sum(10,20);
+        document.write("두 수의 합은 = "+ result+"입니다.");
+        
+        */
+
+        // 콜백함수를 사용하는 경우
+        
         function sum(num1,num2, callback){
             var temp = num1+num2;
-            callback(temp); // callback() 이라는 이름을 꼭 써야 하는건 아니껬지?
+            callback(temp); // callback() 이라는 이름을 꼭 써야 하는건 아니껬지? 써야함!!
         }
+        
         function result(value){
             document.write("두 수의 합은 = "+ value+"입니다.");
         }
+        
         sum(10,20,result);
 
     </script>
