@@ -26,11 +26,12 @@
         */
 
         $(document).ready(function() {
+            console.log("---1 ----");
             checkCount(showMessage);
         });
 
         function showMessage(){
-            alert("왼료되었습니다.");
+            alert("완료되었습니다.");
         }
 
         function checkCount(callback){
@@ -39,7 +40,7 @@
                 count++;
                 if(count>=10)
                     callback();
-            });
+            })
         }
 
 
