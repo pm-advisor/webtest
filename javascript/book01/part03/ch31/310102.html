@@ -27,6 +27,7 @@
 
     <script>
         // 예제01: 1초에 한 번씩 변수 값을 1씩 증가시키고 이 값을 #output 영역에 출력해 주세요.
+        /*
         $(document).ready(function () {
 
             var $output = $("#output");
@@ -36,12 +37,34 @@
             count++;
             // 값을 출력
             $output.text(count);
+            
             setInterval(function () {
                 // 값 증가
                 count++;
                 // 값을 출력
                 $output.text(count);
             }, 1000);
+
+        })
+        */
+
+        // 중복코드 제거를 위해 함수 활용!!
+
+        $(document).ready(function () {
+
+            var $output = $("#output");
+            var count = 0;
+
+            // 함수 생성
+            function addCount() {
+                // 값 증가
+                count++;
+                // 값을 출력
+                $output.text(count);
+            }
+
+            addCount();
+            setInterval(addCount, 1000);
 
         })
 
