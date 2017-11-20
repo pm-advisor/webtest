@@ -41,15 +41,15 @@
             
             // 5초 동안 게임 수행
             var timerID = 0; 
-            timerID = setInterval(function() { 
+            alert("-- Game Start --");
+
+            timerID = setTimeout(function() { 
                 runGame();
+                alert("-- Game Over --");
             }, 5000);
 
-            clearInterval(timerID); // 게임 종료
-
-            function runGame(){
+           function runGame(){
                 // 물고기 클릭시 1점 획득
-                $score.html(count);
                 $("#fish").click(function(){
                     $score.text(count++);                   
                 }); 
