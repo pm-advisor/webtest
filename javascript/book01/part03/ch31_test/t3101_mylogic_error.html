@@ -43,6 +43,7 @@
             var timerID = 0; 
             alert("-- Game Start --");
 
+            // setTimeout 은 5초후에 1번 수행하기 때문에 runGame()이 수행되지 않음!!
             timerID = setTimeout(function() { 
                 runGame();
                 alert("-- Game Over --");
