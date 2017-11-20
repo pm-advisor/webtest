@@ -49,8 +49,10 @@
             }, 5000);
 
            function runGame(){
+               console.log("1");
                 // 물고기 클릭시 1점 획득
                 $("#fish").click(function(){
+                    console.log("count"+(count++));
                     $score.text(count++);                   
                 }); 
             }
