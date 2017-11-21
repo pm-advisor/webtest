@@ -64,12 +64,16 @@
 
 				if(timerID==0){
 
+					console.log("1_timerID : " + timerID );	
+
 					timerID=setInterval(function(){
 
-					console.log("timerID" + timerID );	
+					console.log("2_timerID : " + timerID );	
 
 					// 다음 물고기 위치
 					var x = $fish.position().left+step;
+
+					console.log("3_x : " + x);
 
 					// 물고기 위치가 430을 넘는 경우, 물고기 이동방향을 뒤쪽으로 변경 해줌
 					if(x>=430){
