@@ -78,6 +78,7 @@
             // 물고기 멈추기
             $("btnStop").click(function(){
                 stop();
+                console.log("1_stop");
             })
         }
 
@@ -93,6 +94,7 @@
 
         // 물고기 멈추기
         function stop(){
+            console.log("2_stop");
             clearInterval(timerID);
             timerID = 0;
         }
