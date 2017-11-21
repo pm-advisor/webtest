@@ -32,11 +32,21 @@
             $(document).ready(function() {
                 var currentIndex = 1;
                 var imgList = ["logo_01.jpg", "logo_02.jpg", "logo_03.jpg", "logo_04.jpg", "logo_05.jpg"];
-                var $banner = $(".banner1");
+                var $banner = $(".banner");
 
                 // 여기에 풀이를 입력해주세요.
+                setInterval(function(){
 
-            })
+                    currentIndex ++;
+                    if(currentIndex >= imgList.length){
+                        currentIndex = 0;
+                    }
+
+                    $banner.attr("src","./images/"+imgList[currentIndex]);
+
+                },1000);
+
+            });
         </script>
     </head>
 
