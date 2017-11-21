@@ -52,6 +52,79 @@
 				- $물고기를 움직이는 방법은 물고기.css("left", 위치값)를 해주면 된답니다.
 
 		*/
+        // 리펙토링 : 함수를 이용함!!
+        var $fish = null;
+        var step = 50;
+        var timeID = 0;
+
+        $(document).ready(function(){
+            init();
+            initEvent();
+        });
+
+        // 요소 초기화
+        function init(){
+            $fish = $("#fish");
+        }
+
+        // 이벤트 초기화
+        function initEvent(){
+
+            // 물고기 움직임이기
+            $("#btnStart").click(function(){
+                start();
+            });
+
+            // 물고기 멈추기
+            $("btnStop").click(function(){
+                stop();
+            });
+        }
+
+        // 물고기 움직이는 함수
+        function start(){
+
+            if(timerID == 0){
+                timerID = setInterval(function(){
+                    moveFich();
+                },100);
+            }
+        }
+
+        // 물고기 멈추기
+        function stop(){
+            clearInterval(timerID);
+            timerID = 0;
+        }
+
+        // 물고기 움직이기
+        function moveFish(){
+
+            var x = $fish.position().left + step;
+
+            if(x>= 430){
+                x = 430;
+                $fish.attr("src","fish2.png");
+                step = -50;
+            }
+
+            if(x<50){
+                x=50;
+                $fish.attr("src","fish1.png");
+                step = 50;
+            }
+
+            $fish.css("left",x);
+
+        }
+
+
+
+
+
+
+
+        /* 구현 소스
 		$(document).ready(function(){
 			//물고기 노드 구하기.
 			var $fish = $("#fish");
@@ -102,6 +175,7 @@
 				timerID=0;
 			})
 		});
+        */
 
 	</script>
 </head>
