@@ -83,7 +83,10 @@
             // 1초에 한번씩 함수 호출
             setInterval(function(){
                 // 다음에 등장할 배너 인덱스 값 구하기(랜덤순)
-                currentIndex = Math.random()*imgList.length;
+                // currentIndex = Math.random()*imgList.length; // currentIndex : 1.1488839825498454
+                currentIndex = Math.floor(Math.random()*imgList.length);
+                // 로그확인용
+                console.log("imgList.length : "+imgList.length);
                 console.log("currentIndex : "+currentIndex);
 
                 // 다음 이미지 이름 구하기
