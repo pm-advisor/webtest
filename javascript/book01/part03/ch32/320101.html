@@ -10,9 +10,15 @@
             var $info = null;
             $(document).ready(function() {
                 $info = $("#info");
-                // 50~100사이의 숫자를 #info에 출력
-                $info.text(parseInt(Math.random()*100));
-                // 0.5초마다.
+                
+                // 0.5초마다
+                setInterval(function(){
+                    // 50~100사이의 숫자를 #info에 출력
+                    $info.text(parseInt(Math.random()*100));
+                },500);
+                
+                
+
 
 
             })
