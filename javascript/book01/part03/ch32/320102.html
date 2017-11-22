@@ -16,6 +16,7 @@
          */
         var value = window.prompt("숫자를 입력해주세요.", 0);
 
+        /* 풀이전 코드
         if(value<10)
          value =10;
 
@@ -23,6 +24,17 @@
             value=100;
 
         alert(value);
+        */
+
+        // Math.min(), Math.max() 를 이용하여 간결하게 표현하기
+        // Math.min(최소값, 비교값) : 최소값과 비교값을 비교해 작은 값을 리턴
+        // Math.max(최대값, 비교값) : 최대값과 비교값을 비교해 큰 값을 리턴
+        value = Math.max(10,value);  // value = 9   --> 10  리턴
+                                     // value = 50  --> 50  리턴   
+        value = Math.min(100,value); // value = 110 --> 100 리턴
+
+        alert(value);
+
     </script>
 
 
