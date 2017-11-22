@@ -1,7 +1,7 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD Xhtml 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 <html>
     <head>
-        <script src="../../libs/jquery-1.11.0.min.js"></script>
+        <script src="../../../libs/jquery-1.11.0.min.js"></script>
 
         <script>
             /*
@@ -10,7 +10,10 @@
             var $info = null;
             $(document).ready(function() {
                 $info = $("#info");
-                // 여기에 코드를 입력해주세요.
+                // 50~100사이의 숫자를 #info에 출력
+                $info.text(parseInt(Math.random()*100));
+                // 0.5초마다.
+
 
             })
 
