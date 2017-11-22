@@ -11,17 +11,24 @@
             $(document).ready(function() {
                 $info = $("#info");
                 
+                /* 내 풀이한것!!                
                 // 0.5초마다
                 setInterval(function(){
                     // 50~100사이의 숫자를 #info에 출력
                     $info.text(parseInt(Math.random()*100));
                 },500);
+                */
+
+                // showRandom();
+                setInterval(showRandom,500);
                 
-                
+            });
 
-
-
-            })
+            // 램덤 숫자 출력
+            function showRandom(){
+                var result = parseInt(Math.random()*50)+50;
+                $info.html(result);
+            }
 
         </script>
 
