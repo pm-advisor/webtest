@@ -83,10 +83,13 @@
             // 1초에 한번씩 함수 호출
             setInterval(function(){
                 // 다음에 등장할 배너 인덱스 값 구하기(랜덤순)
-                // currentIndex = Math.random()*imgList.length; // currentIndex : 4.6
-                // currentIndex = Math.floor(Math.random()*imgList.length);
-                // currentIndex = Math.ceil(Math.random()*imgList.length); // 올림으로 해도 오류가 발생하지는 않음
-                currentIndex = Math.ceil(4.6);
+                // currentIndex = Math.random()*imgList.length; // currentIndex : 4.6 이 발생할 수 있는지?
+                //                0 <= Math.random()*imgList.length < 5
+                // currentIndex = Math.floor(Math.random()*imgList.length); // 교재 정답!! 내림값
+
+                // currentIndex = Math.ceil(4.6); // 반올림되어 인덱스를 찾을 수 없다는 오류 발생
+                currentIndex = Math.ceil(Math.random()*imgList.length); // 올림으로 해도 오류가 발생하지는 않음
+                
                 // 로그확인용
                 console.log("imgList.length : "+imgList.length);
                 console.log("currentIndex : "+currentIndex);
