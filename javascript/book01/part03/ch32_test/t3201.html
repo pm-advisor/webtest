@@ -84,7 +84,8 @@
             setInterval(function(){
                 // 다음에 등장할 배너 인덱스 값 구하기(랜덤순)
                 // currentIndex = Math.random()*imgList.length; // currentIndex : 1.1488839825498454
-                currentIndex = Math.floor(Math.random()*imgList.length);
+                // currentIndex = Math.floor(Math.random()*imgList.length);
+                currentIndex = Math.ceil(Math.random()*imgList.length);
                 // 로그확인용
                 console.log("imgList.length : "+imgList.length);
                 console.log("currentIndex : "+currentIndex);
